@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <main class="app">
+        <header class="top">
+            <div class="logo">✓</div>
+            <div>
+                <h1>My Tasks</h1>
+                <p>Plan your day, one task at a time.</p>
+            </div>
+        </header>
+
+        <section class="progress-card">
+            <div class="progress-heading">
+                <span>Today's progress</span>
+                <strong id="progressText">0% completed</strong>
+            </div>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+            <p id="taskCount">0 tasks added</p>
+        </section>
+
+        <form id="taskForm" class="add-form">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                maxlength="150"
+                autocomplete="off"
+                aria-label="New task"
+                required
+            >
+            <button type="submit">+ Add Task</button>
+        </form>
+
+        <nav class="filters" aria-label="Task filters">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+        </nav>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div id="emptyState" class="empty">
+            <div class="empty-icon">✦</div>
+            <h2>No tasks yet</h2>
+            <p>Add a task above to get started.</p>
+        </div>
+
+        <footer class="bottom">
+            <span id="remainingText">0 tasks remaining</span>
+            <button type="button" id="clearCompleted">Clear completed</button>
+        </footer>
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+</html>

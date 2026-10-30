@@ -1,0 +1,263 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #202d43;
+    background: linear-gradient(135deg, #eef3ff, #f8faff);
+}
+
+.app {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #e5eaf4;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 18px 55px #243d6712;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #397cf6;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.top h1 {
+    font-size: 27px;
+}
+
+.top p {
+    margin-top: 5px;
+    color: #8290a6;
+    font-size: 13px;
+}
+
+.progress-card {
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 17px;
+    background: #f3f6fd;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.progress-heading strong {
+    color: #3478ee;
+}
+
+.progress-track {
+    height: 8px;
+    margin: 13px 0 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #dfe6f3;
+}
+
+#progressBar {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: #397cf6;
+    transition: width 0.25s;
+}
+
+.progress-card p {
+    color: #8290a6;
+    font-size: 12px;
+}
+
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.add-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.add-form input:focus {
+    border-color: #397cf6;
+    box-shadow: 0 0 0 3px #397cf61a;
+}
+
+.add-form button {
+    padding: 0 17px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 12px;
+    background: #397cf6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-form button:hover {
+    background: #2563d8;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #edf0f6;
+}
+
+.filter {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #718096;
+    cursor: pointer;
+}
+
+.filter:hover {
+    background: #f1f5fc;
+}
+
+.filter.active {
+    background: #eaf1ff;
+    color: #2868db;
+    font-weight: 600;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 3px;
+    border-bottom: 1px solid #edf0f6;
+}
+
+.task-check {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: #397cf6;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.task.completed .task-text {
+    color: #9aa5b5;
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #d64545;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #ffdddd;
+}
+
+.empty {
+    padding: 35px 10px;
+    text-align: center;
+}
+
+.empty-icon {
+    margin-bottom: 10px;
+    color: #397cf6;
+    font-size: 32px;
+}
+
+.empty h2 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.empty p {
+    color: #8a97aa;
+    font-size: 13px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    color: #8190a5;
+    font-size: 12px;
+}
+
+.bottom button {
+    border: none;
+    background: transparent;
+    color: #397cf6;
+    cursor: pointer;
+}
+
+.bottom button:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 20px;
+    }
+
+    .add-form {
+        flex-direction: column;
+    }
+
+    .add-form button {
+        min-height: 44px;
+    }
+
+    .task {
+        gap: 9px;
+    }
+}
