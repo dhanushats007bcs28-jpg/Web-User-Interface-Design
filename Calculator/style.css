@@ -1,0 +1,195 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #101827, #263958);
+    color: #f8fafc;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 370px;
+    padding: 25px;
+    border: 1px solid #ffffff25;
+    border-radius: 28px;
+    background: #172338;
+    box-shadow: 0 25px 70px #0006;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #9caec7;
+    font-size: 12px;
+}
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff20;
+    border-radius: 50%;
+    background: #263650;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.display {
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 18px 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff20;
+}
+
+.expression {
+    min-height: 25px;
+    color: #9caec7;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.result {
+    width: 100%;
+    text-align: right;
+    font-size: clamp(32px, 9vw, 43px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+}
+
+.buttons button {
+    min-width: 0;
+    height: 59px;
+    border: none;
+    border-radius: 16px;
+    background: #263650;
+    color: #f8fafc;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.buttons button:hover {
+    background: #3b4e6d;
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+.buttons .special {
+    background: #344660;
+    color: #b9d4ff;
+}
+
+.buttons .operator {
+    background: #243d5d;
+    color: #75b7ff;
+    font-size: 25px;
+}
+
+.buttons .equals {
+    background: #3984f6;
+    color: white;
+    font-size: 26px;
+}
+
+.buttons .equals:hover {
+    background: #2468d7;
+}
+
+footer {
+    margin-top: 22px;
+    color: #8395ae;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Light theme */
+body.light {
+    background: linear-gradient(135deg, #e8eef8, #cbd8ee);
+    color: #18243a;
+}
+
+body.light .calculator {
+    background: #ffffff;
+    border-color: #dbe3f0;
+}
+
+body.light .header p,
+body.light .expression,
+body.light footer {
+    color: #718096;
+}
+
+body.light .theme-btn,
+body.light .buttons button {
+    background: #edf2fa;
+    color: #25364f;
+}
+
+body.light .buttons .operator {
+    background: #deebff;
+    color: #1767cf;
+}
+
+body.light .buttons .equals {
+    background: #3984f6;
+    color: white;
+}
+
+body.light .buttons .special {
+    background: #e1eafa;
+    color: #285caa;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .buttons button {
+        height: 54px;
+        border-radius: 13px;
+    }
+}
